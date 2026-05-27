@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control - Simulador de Anuncios</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #e9ecef; padding: 40px; margin: 0; }
+        h1 { text-align: center; color: #343a40; margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #6c757d; margin-bottom: 40px; }
+        .container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+        .card { background: white; width: 320px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-header { padding: 20px; text-align: center; color: white; font-weight: bold; font-size: 20px; }
+        .instagram { background-color: #E1306C; }
+        .facebook { background-color: #1877F2; }
+        .google { background-color: #4285F4; }
+        .card-body { padding: 25px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-body p { color: #495057; font-size: 15px; line-height: 1.5; margin: 0 0 20px 0; }
+        .btn-ad { color: white; padding: 12px 20px; text-decoration: none; font-size: 15px; border-radius: 6px; font-weight: bold; display: block; transition: background-color 0.2s; }
+        .instagram .btn-ad { background-color: #C13584; }
+        .instagram .btn-ad:hover { background-color: #b02674; }
+        .facebook .btn-ad { background-color: #166FE5; }
+        .facebook .btn-ad:hover { background-color: #145dbf; }
+        .google .btn-ad { background-color: #1A73E8; }
+        .google .btn-ad:hover { background-color: #155cb8; }
+        .url-preview { background: #f8f9fa; font-family: monospace; font-size: 11px; color: #6c757d; padding: 8px; border-radius: 4px; margin-top: 15px; word-break: break-all; border: 1px solid #dee2e6; }
+    </style>
+</head>
+<body>
+
+    <h1>Simulador de Campañas Publicitarias</h1>
+    <p class="subtitle">Haz clic en cualquiera de los anuncios para probar cómo reacciona tu formulario y Salesforce</p>
+    
+    <div class="container">
+
+        <div class="card instagram">
+            <div class="card-header">Anuncio de Instagram</div>
+            <div class="card-body">
+                <p><strong>Visualización:</strong> Historia o Reel de bodas en Cancún.<br><br>Simula que un usuario ve una foto hermosa de playa en IG, se interesa y desliza hacia arriba.</p>
+                <div>
+                    <a class="btn-ad" href="formulario.html?utm_source=instagram&campaign=boda_cancun">
+                        Simular Clic en Instagram
+                    </a>
+                    <div class="url-preview">destino: formulario.html?utm_source=instagram</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card facebook">
+            <div class="card-header">Anuncio de Facebook</div>
+            <div class="card-body">
+                <p><strong>Visualización:</strong> Publicación patrocinada en el Feed.<br><br>Simula una campaña dirigida a parejas recién comprometidas dentro de Facebook que buscan wedding planners.</p>
+                <div>
+                    <a class="btn-ad" href="formulario.html?utm_source=facebook&campaign=propuestas_lujo">
+                        Simular Clic en Facebook
+                    </a>
+                    <div class="url-preview">destino: formulario.html?utm_source=facebook</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card google">
+            <div class="card-header">Anuncio de Google (SEM)</div>
+            <div class="card-body">
+                <p><strong>Visualización:</strong> Enlace patrocinado en buscador.<br><br>Simula que alguien buscó en Google: <i>"mejores coordinadores de bodas en México"</i> y le dio clic a tu enlace.</p>
+                <div>
+                    <a class="btn-ad" href="formulario.html?utm_source=google&keyword=wedding_planner">
+                        Simular Clic en Google Ads
+                    </a>
+                    <div class="url-preview">destino: formulario.html?utm_source=google</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
