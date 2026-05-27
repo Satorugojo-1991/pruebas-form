@@ -1,24 +1,20 @@
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
 <script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
 
-<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWF00000B5nHt" method="POST">
+<form id="formularioBoda" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWF00000B5nHt" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"6Ld9kv8sAAAAAAjxDLp17yn9oPcYhzuf-gVkK8Rj","fallback":"true","orgId":"00DWF00000B5nHt","ts":""}'>
 <input type=hidden name="oid" value="00DWF00000B5nHt">
-<input type=hidden name="retURL" value="https://www.google.com">
+<input type="hidden" name="retURL" value="https://www.google.com">
 
 <input type="hidden" name="debug" value="0">
 
-<label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
-<label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
-<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required /><br>
-<label for="mobile">Mobile</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" required/><br>
+<label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required/><br>
+<label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required/><br>
+<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required/><br>
+<label for="mobile">Mobile</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
 
-Event Type:<select id="00NWF0000047Z8P" name="00NWF0000047Z8P" required title="Event Type"><option value="">--None--</option>
-<option value="Wedding">Wedding</option>
+Event Type:<select id="00NWF0000047Z8P" name="00NWF0000047Z8P" title="Event Type"><option value="">--None--</option><option value="Wedding">Wedding</option>
 <option value="Marriage Proposal">Marriage Proposal</option>
 <option value="Vow Renewal">Vow Renewal</option>
 <option value="Birthday">Birthday</option>
@@ -28,39 +24,51 @@ Event Type:<select id="00NWF0000047Z8P" name="00NWF0000047Z8P" required title="E
 <option value="Special Ocassions">Special Ocassions</option>
 </select><br>
 
-Event start date:
-<input id="00NWF000004HPfd" name="00NWF000004HPfd" type="date" required/><br>
+Event start date:<span class="dateInput dateOnlyInput"><input id="00NWF000004HPfd" name="00NWF000004HPfd" size="12" type="date" /></span><br>
 
 Number of Guests:<input id="00NWF0000047Z6n" name="00NWF0000047Z6n" size="20" type="text" /><br>
 
-Estimated event budget:<select id="00NWF000004HQv3" name="00NWF000004HQv3" required title="Estimated event budget"><option value="">--None--</option><option value="Less than $40,000">Less than $40,000</option>
+Estimated event budget:<select id="00NWF000004HQv3" name="00NWF000004HQv3" title="Estimated event budget"><option value="">--None--</option><option value="Less than $40,000">Less than $40,000</option>
 <option value="$50,000 - $90,000">$50,000 - $90,000</option>
 <option value="$100,000 - $150,000">$100,000 - $150,000</option>
 <option value="$151,000 - $250,000">$151,000 - $250,000</option>
 <option value="$251,000 - and above">$251,000 - and above</option>
 </select><br>
 
-Estimated planning budget:<select id="00NWF000004HQwf" name="00NWF000004HQwf" required title="Estimated planning budget"><option value="">--None--</option><option value="Less than $5,000">Less than $5,000</option>
+Estimated planning budget:<select id="00NWF000004HQwf" name="00NWF000004HQwf" title="Estimated planning budget"><option value="">--None--</option><option value="Less than $5,000">Less than $5,000</option>
 <option value="$6,000 - $10,000">$6,000 - $10,000</option>
 <option value="$10,001 - $15,000">$10,001 - $15,000</option>
 <option value="$15,001 - $20,000">$15,001 - $20,000</option>
 <option value="$20,001 - $25,000">$20,001 - $25,000</option>
 </select><br>
 
-<input type="hidden" name="lead_source" value="Website/Contact (organic)">
 <input type="hidden" name="recordType" value="012WF000002vmUz">
+<input type="hidden" name="lead_source" value="Website/Contact (organic)">
 
 <input id="00NWF0000058wgf" name="00NWF0000058wgf" type="hidden" value="" />
 
 <div class="g-recaptcha" data-sitekey="6Ld9kv8sAAAAAAjxDLp17yn9oPcYhzuf-gVkK8Rj"></div><br>
-<input type="submit" name="submit">
+
+<input type="submit" name="submit" value="Enviar">
 
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
+    // 1. Inyectar la URL actual de Instagram/Facebook
     const campoUrl = document.getElementById('00NWF0000058wgf');
     if (campoUrl) {
       campoUrl.value = window.location.href;
     }
+
+    // 2. Candado de seguridad: Si el usuario no resuelve el captcha, frena el envío
+    const form = document.getElementById('formularioBoda');
+    form.addEventListener('submit', function(e) {
+      const response = grecaptcha.getResponse();
+      if (response.length === 0) {
+        e.preventDefault(); // Detiene el envío por completo
+        alert('Por favor, completa la verificación de "No soy un robot" antes de enviar.');
+        return false;
+      }
+    });
   });
 </script>
 
