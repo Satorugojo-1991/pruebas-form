@@ -1,20 +1,16 @@
-Aquí tienes el código listo con tu correo de pruebas (urios@ts4.mx) ya integrado en el bloque de debug.
-
-Simplemente copia y pega este bloque en tu archivo:
+Aquí tienes todo el código HTML unificado, limpio y estructurado con el subdominio corregido (webtolead) para asegurar que el navegador te devuelva los datos del debug directo en la pantalla:
 HTML
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dam00001Z88bv" method="POST">
+<form action="https://webtolead.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-<input type=hidden name="oid" value="00Dam00001Z88bv">
-<input type=hidden name="retURL" value="http://">
+<input type="hidden" name="oid" value="00Dam00001Z88bv">
+<input type="hidden" name="retURL" value="http://">
 
-<!-- ===================== MODO DEBUG ACTIVADO ===================== -->
 <input type="hidden" name="debug" value="1">
 <input type="hidden" name="debugEmail" value="urios@ts4.mx">
 
-<!-- ===================== CAMPOS DEL FORMULARIO ===================== -->
 <label for="first_name">First Name</label>
 <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
 
@@ -58,14 +54,10 @@ Event start date:
 Message:
 <textarea id="00NWj00000IfqNT" name="00NWj00000IfqNT" type="text" wrap="soft"></textarea><br>
 
-<!-- ===================== CAMPOS OCULTOS ===================== -->
-<!-- Lead Source oculto -->
 <input type="hidden" name="lead_source" value="Website">
 
-<!-- Lead Record Type oculto (Del Cabo events) -->
 <input type="hidden" name="recordType" value="012Wj000001C1m9">
 
-<!-- Del Cabo Events = TRUE -->
 <input type="hidden" name="00NWj00000IfqNg" value="1">
 
 <input type="submit" name="submit">
