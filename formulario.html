@@ -1,64 +1,118 @@
-Aquí tienes todo el código HTML unificado, limpio y estructurado con el subdominio corregido (webtolead) para asegurar que el navegador te devuelva los datos del debug directo en la pantalla:
-HTML
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
-<form action="https://webtolead.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
 
-<input type="hidden" name="oid" value="00Dam00001Z88bv">
-<input type="hidden" name="retURL" value="http://">
+<form id="formularioBoda" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWF00000B5nHt" method="POST">
 
-<input type="hidden" name="debug" value="1">
-<input type="hidden" name="debugEmail" value="urios@ts4.mx">
+<input type=hidden name="oid" value="00DWF00000B5nHt">
+<input type=hidden name="retURL" value="http://">
 
-<label for="first_name">First Name</label>
-<input id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="urios@ts4.mx">            -->
+<!--  ----------------------------------------------------------------------  -->
 
-<label for="last_name">Last Name</label>
-<input id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
+<Input type="hidden" name="recordType" value="012WF000002vmUz">
 
-<label for="email">Email</label>
-<input id="email" maxlength="80" name="email" size="20" type="text" required /><br>
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-<label for="phone">Phone Number (with country code)</label>
-<input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
-<label for="company">Company</label>
-<input id="company" maxlength="40" name="company" size="20" type="text" required /><br>
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-Number of Guests:
-<input id="00NWj00000IfqNV" name="00NWj00000IfqNV" size="20" type="text" /><br>
+<label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
 
-Event Type:
-<select id="00NWj00000IfqNP" name="00NWj00000IfqNP" title="Event Type">
-    <option value="">--None--</option>
-    <option value="Conference">Conference</option>
-    <option value="Social Event">Social Event</option>
-    <option value="Other">Other</option>
-    <option value="Corporate Retreat">Corporate Retreat</option>
-    <option value="Meeting">Meeting</option>
-    <option value="Incentive Trip">Incentive Trip</option>
+Event Type:<select  id="00NWF0000047Z8P" name="00NWF0000047Z8P" title="Event Type"><option value="">--None--</option><option value="Conference">Conference</option>
+<option value="Social Event">Social Event</option>
+<option value="Other">Other</option>
+<option value="Corporate Retreat">Corporate Retreat</option>
+<option value="Meeting">Meeting</option>
+<option value="Incentive Trip">Incentive Trip</option>
+<option value="Wedding">Wedding</option>
+<option value="Marriage Proposal">Marriage Proposal</option>
+<option value="Vow Renewal">Vow Renewal</option>
+<option value="Birthday">Birthday</option>
+<option value="Other Celebration">Other Celebration</option>
+<option value="Anniversary">Anniversary</option>
+<option value="Elopements">Elopements</option>
+<option value="Special Ocassions">Special Ocassions</option>
 </select><br>
 
-Event Location:
-<select id="00NWj00000IfqNL" name="00NWj00000IfqNL" required title="Event Location">
-    <option value="">--None--</option>
-    <option value="Los Cabos">Los Cabos</option>
-    <option value="Puerto Vallarta - Punta de Mita">Puerto Vallarta - Punta de Mita</option>
-    <option value="San Miguel de Allende">San Miguel de Allende</option>
+Event start date:<span class="dateInput dateOnlyInput"><input  id="00NWF000004HPfd" name="00NWF000004HPfd" size="12" type="date" /></span><br>
+
+Number of Guests:<input  id="00NWF0000047Z6n" name="00NWF0000047Z6n" size="20" type="text" /><br>
+
+Estimated planning budget:<select  id="00NWF000004HQwf" name="00NWF000004HQwf" title="Estimated planning budget"><option value="">--None--</option><option value="Less than $5,000">Less than $5,000</option>
+<option value="$6,000 - $10,000">$6,000 - $10,000</option>
+<option value="$10,001 - $15,000">$10,001 - $15,000</option>
+<option value="$15,001 - $20,000">$15,001 - $20,000</option>
+<option value="$20,001 - $25,000">$20,001 - $25,000</option>
 </select><br>
 
-Event start date:
-<input id="00NWj00000IfqNO" name="00NWj00000IfqNO" type="date" required/><br>
+Estimated event budget:<select  id="00NWF000004HQv3" name="00NWF000004HQv3" title="Estimated event budget"><option value="">--None--</option><option value="Less than $40,000">Less than $40,000</option>
+<option value="$50,000 - $90,000">$50,000 - $90,000</option>
+<option value="$100,000 - $150,000">$100,000 - $150,000</option>
+<option value="$151,000 - $250,000">$151,000 - $250,000</option>
+<option value="$251,000 - and above">$251,000 - and above</option>
+</select><br>
 
-Message:
-<textarea id="00NWj00000IfqNT" name="00NWj00000IfqNT" type="text" wrap="soft"></textarea><br>
+<input type="hidden" id="lead_source" name="lead_source" value="">
 
-<input type="hidden" name="lead_source" value="Website">
+<input type="hidden" id="00NWF0000058wgf" name="00NWF0000058wgf" value="">
 
-<input type="hidden" name="recordType" value="012Wj000001C1m9">
-
-<input type="hidden" name="00NWj00000IfqNg" value="1">
+<div class="g-recaptcha" data-sitekey="6Ld9kv8sAAAAAAjxDLp17yn9oPcYhzuf-gVkK8Rj"></div><br>
 
 <input type="submit" name="submit">
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const urlActual = window.location.href.toLowerCase();
+    const campoLeadSource = document.getElementById('lead_source');
+    
+    if (campoLeadSource) {
+      if (urlActual.includes('instagram')) {
+        campoLeadSource.value = 'Instagram-Organic';
+      } 
+      else if (urlActual.includes('facebook')) {
+        campoLeadSource.value = 'Facebook-Organic';
+      } 
+      else if (urlActual.includes('google')) {
+        campoLeadSource.value = 'TikTok-Organic';
+      } 
+      else {
+        campoLeadSource.value = 'Website';
+      }
+    }
+
+    const campoUrl = document.getElementById('00NWF0000058wgf'); 
+    if (campoUrl) {
+      campoUrl.value = window.location.href;
+    }
+
+    const form = document.getElementById('formularioBoda');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const response = grecaptcha.getResponse();
+        if (response.length === 0) {
+          e.preventDefault(); // Detiene el envío por completo
+          alert('Por favor, completa la verificación de "No soy un robot" antes de enviar.');
+          return false;
+        }
+      });
+    }
+  }); // <-- Esta es la forma correcta de cerrar el DOMContentLoaded que abriste arriba
+</script>
+
 </form>
