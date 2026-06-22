@@ -4,91 +4,70 @@
 <!--  character set of your HTML page.                                        -->
 <!--  ----------------------------------------------------------------------  -->
 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
+
+
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWF00000B5nHt" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"reCAPTCHA_GitHub","fallback":"true","orgId":"00DWF00000B5nHt","ts":""}'>
-<input type=hidden name="oid" value="00DWF00000B5nHt">
-<input type=hidden name="retURL" value="http://">
+
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dam00001Z88bv" method="POST">
+
+
+<input type=hidden name='captcha_settings' value='{"keyname":"Del_Cabo","fallback":"true","orgId":"00Dam00001Z88bv","ts":""}'>
+<input type=hidden name="oid" value="00Dam00001Z88bv">
+<input type=hidden name="retURL" value="https://ariaverafloral.com/">
+
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
-<input type="hidden" name="debug" value="1">
+<input type="hidden" name="debug" value=1>
 <input type="hidden" name="debugEmail" value="urios@ts4.mx">
 <!--  ----------------------------------------------------------------------  -->
 
 
-<input type="hidden" id="recordType" name="recordType" value="012WF000002vmUz">
-
-
-<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-
-<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-
-Event Type:<select  id="00NWF0000047Z8P" name="00NWF0000047Z8P" title="Event Type"><option value="">--None--</option><option value="Conference">Conference</option>
-<option value="Social Event">Social Event</option>
-<option value="Other">Other</option>
-<option value="Corporate Retreat">Corporate Retreat</option>
-<option value="Meeting">Meeting</option>
-<option value="Incentive Trip">Incentive Trip</option>
-<option value="Wedding">Wedding</option>
-<option value="Marriage Proposal">Marriage Proposal</option>
-<option value="Vow Renewal">Vow Renewal</option>
-<option value="Birthday">Birthday</option>
-<option value="Other Celebration">Other Celebration</option>
-<option value="Anniversary">Anniversary</option>
-<option value="Elopements">Elopements</option>
-<option value="Special Ocassions">Special Ocassions</option>
-</select><br>
-
-Event start date:<span class="dateInput dateOnlyInput"><input  id="00NWF000004HPfd" name="00NWF000004HPfd" size="12" type="date" /></span><br>
-
-Number of Guests:<input  id="00NWF0000047Z6n" name="00NWF0000047Z6n" size="20" type="text" /><br>
-
-Estimated event budget:<select  id="00NWF000004HQv3" name="00NWF000004HQv3" title="Estimated event budget"><option value="">--None--</option><option value="Less than $40,000">Less than $40,000</option>
-<option value="$50,000 - $90,000">$50,000 - $90,000</option>
-<option value="$100,000 - $150,000">$100,000 - $150,000</option>
-<option value="$151,000 - $250,000">$151,000 - $250,000</option>
-<option value="$251,000 - and above">$251,000 - and above</option>
-</select><br>
-
-Estimated planning budget:<select  id="00NWF000004HQwf" name="00NWF000004HQwf" title="Estimated planning budget"><option value="">--None--</option><option value="Less than $5,000">Less than $5,000</option>
-<option value="$6,000 - $10,000">$6,000 - $10,000</option>
-<option value="$10,001 - $15,000">$10,001 - $15,000</option>
-<option value="$15,001 - $20,000">$15,001 - $20,000</option>
-<option value="$20,001 - $25,000">$20,001 - $25,000</option>
-</select><br>
-
-<input type="hidden" id="lead_source" name="lead_source" value="Website/Contact (organic)">
-
-<input type="hidden" id="00NWF0000058wgf" name="00NWF0000058wgf" value="">
-
-
-<div class="g-recaptcha" data-sitekey="6Ld9kv8sAAAAAAjxDLp17yn9oPcYhzuf-gVkK8Rj"></div><br>
+<label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
+	<label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
+	<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required /><br>
+	<label for="mobile">Phone Number (with country code)</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" required/><br>
+	Best Time to Call:<input id="00NWj00000IfqNF" maxlength="255" name="00NWj00000IfqNF" size="20" type="text" required /><br>
+	Event start date:
+	<input id="00NWj00000IfqNO" name="00NWj00000IfqNO" type="date" required/><br>
+	Event type:<select id="00NWj00000IfqNE" name="00NWj00000IfqNE" title="Event type" required ><option value="">--None--</option><option value="Weddings &amp; Wedding-Related Events">Weddings &amp; Wedding-Related Events</option>
+	<option value="Social Celebrations">Social Celebrations</option>
+	<option value="Luxury, Brand &amp; Specialty Events">Luxury, Brand &amp; Specialty Events</option>
+	<option value="Corporate &amp; Business Events">Corporate &amp; Business Events</option>
+	</select><br>
+	Event Location:<select id="00NWj00000IfqNL" name="00NWj00000IfqNL" required title="Event Location" required ><option value="">--None--</option><option value="Los Cabos">Los Cabos</option>
+	<option value="Puerto Vallarta - Punta de Mita">Puerto Vallarta - Punta de Mita</option>
+	<option value="San Miguel de Allende">San Miguel de Allende</option>
+	</select><br>
+	Message:<textarea id="00NWj00000IfqNT" name="00NWj00000IfqNT" type="text" wrap="soft"></textarea><br>
+	<!-- ===================== CAMPOS OCULTOS ===================== -->
+	<!-- Lead Source oculto -->
+	<input type="hidden" name="lead_source" value="Website/Contact (organic)">
+	<!-- Lead Record Type (Aria Vera) -->
+	<input type="hidden" name="recordType" value="012WF000002vmWb">
+	<!-- Aria Vera = TRUE -->
+	<input type="hidden" name="00NWF0000047bOj" value="1">
+	<!-- contact_url -->
+	<input id="00NWF0000058wgf" name="00NWF0000058wgf" type="hidden" />
+   
+	
+<div class="g-recaptcha" data-sitekey="6LeCKMMsAAAAANGI1Ks6X8U_ywljEimEPkBJN212"></div><br>
 <input type="submit" name="submit">
-
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const campoUrl = document.getElementById('00NWF0000058wgf'); 
-      if (campoUrl) {
-        campoUrl.value = window.location.href;
-      }
-    });
-  </script>
 
 </form>
 
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const campoUrl = document.getElementById('00NWF0000058wgf');
+      if (campoUrl) {
+        campoUrl.value = window.location.href;
+      }
+    });
+  </script>
